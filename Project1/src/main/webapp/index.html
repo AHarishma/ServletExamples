@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type"
+	content="application/xhtml+xml; charset=UTF-8" />
+<title></title>
+
+<script type="text/javascript">
+	function validate() {
+		var name = document.forms["MyForm"]["NAME"].value;
+		var phoneNumber = document.forms["MyForm"]["PHONE NO"].value;
+		if (name=="" || phoneNumber==""||isNaN(phoneNumber)) {
+			alert("The name and phone number should be filled out");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+
+	<form name="MyForm" action="/welcome" onsubmit="return validate()"
+		method="POST">
+		NAME : <input type="text" name="NAME"><br> <br>
+		PHONE NO. : <input type="text" name="PHONE NO"><br> <input
+			type="submit" value="SUBMIT">
+	</form>
+</body>
+</html>
